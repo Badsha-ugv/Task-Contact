@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{contact.first_name}} {{contact.last_name}}{% endblock %}
+
+{% block content %}
+
+<h2>Contact Detail Info</h2>
+<div>
+
+    <h3><strong>Name: </strong>{{contact.first_name}} {{contact.last_name}}</h3>
+    <p><strong>Email:</strong> {{contact.email}}</p>
+    <p><strong>Phone:</strong> {{contact.phone}}</p>
+    <p><strong>Address:</strong> {{contact.address}}</p>
+
+
+</div>
+<br><br>
+<div>
+    <a href="{% url 'contact_update' contact.id %}" style="background-color: green; color: white; padding: 5px 10px;">Update</a>
+    <a href="{% url 'contact_delete' contact.id %}" style="background-color: red; color: white; padding: 5px 10px;">Delete</a>
+</div>
+
+{% endblock %}

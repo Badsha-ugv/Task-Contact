@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CMS {% endblock %}</title>
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+</head>
+<body>
+
+    <nav style="display: flex; justify-content: center; padding: 20px;">
+        <ol>
+            <li><a href="{% url 'contact_list' %}">Home</a></li>
+            <li><a href="{% url 'contact_create' %}">Add Contact</a></li>
+            
+        </ol>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+</html>
